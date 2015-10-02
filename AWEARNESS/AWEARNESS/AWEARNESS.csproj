@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A68D29B6-9696-46B5-84B2-384E45970C44}</ProjectGuid>
+    <ProjectGuid>{831ADDCD-FC44-4F53-BF36-474657195473}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -140,12 +140,16 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="css\alert_style.css" />
     <Content Include="Global.asax" />
+    <Content Include="images\alertButton.svg" />
     <Content Include="images\araw-small-1-01.svg" />
+    <Content Include="images\hole.svg" />
     <Content Include="images\holly-01.svg" />
     <Content Include="images\meshushe-push-1-01.svg" />
     <Content Include="images\old-man.jpg" />
     <Content Include="images\telephone-white-1-01.svg" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -161,17 +165,17 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\User\Create.cshtml" />
-    <Content Include="Views\User\Delete.cshtml" />
-    <Content Include="Views\User\Details.cshtml" />
-    <Content Include="Views\User\Edit.cshtml" />
-    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Caregiver\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Layout_Simple.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Caregiver\Index.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -189,9 +193,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>4849</DevelopmentServerPort>
+          <DevelopmentServerPort>17066</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:4849/</IISUrl>
+          <IISUrl>http://localhost:17066/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
