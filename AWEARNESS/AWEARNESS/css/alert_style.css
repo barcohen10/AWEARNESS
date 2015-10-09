@@ -123,3 +123,50 @@ p.repeat {
     color: white;
     font-family: Arial;
 }
+
+
+#tabs
+{
+    width:100%;
+}
+
+.tabsIcons
+{
+    width:33%;
+}
+
+
+
+
+/*CENTER ICON ON RESPONSIVE PAGE///////////////////////////////////*/
+#icon
+{
+	position: absolute;
+	max-width: 80%;
+	top: 10%;
+	left: 10%;
+}
+
+#icon:empty
+{
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+@media screen and (orientation: portrait) {
+  #icon {
+      max-width: 90%;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #icon {
+      max-height: 90%;
+  }
+}
+/*///////////////////////////////////////////////////////////////////*/

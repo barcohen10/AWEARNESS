@@ -139,14 +139,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="css\alert_style.css" />
+    <Content Include="css\animate.css" />
     <Content Include="Global.asax" />
-    <Content Include="images\alertButton.svg" />
+    <Content Include="images\alert-1.svg" />
     <Content Include="images\araw-small-1-01.svg" />
-    <Content Include="images\hole.svg" />
-    <Content Include="images\holly-01.svg" />
-    <Content Include="images\meshushe-push-1-01.svg" />
+    <Content Include="images\bar-1.svg" />
+    <Content Include="images\chatTab.svg" />
+    <Content Include="images\contant-hole-1.svg" />
+    <Content Include="images\contect-hole-big-1.svg" />
+    <Content Include="images\contactsTab.svg" />
+    <Content Include="images\icon.png" />
+    <Content Include="images\medicalInfoTab.svg" />
     <Content Include="images\old-man.jpg" />
+    <Content Include="images\old.jpg" />
     <Content Include="images\telephone-white-1-01.svg" />
+    <Content Include="js\mainScript.js" />
+    <Content Include="js\wow.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -176,6 +184,9 @@
     <Content Include="Views\User\Details.cshtml" />
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Caregiver\CaregiverEvent.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

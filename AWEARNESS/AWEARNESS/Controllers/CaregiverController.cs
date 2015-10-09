@@ -21,5 +21,10 @@ namespace AWEARNESS.Controllers
             }
             return View(user);
         }
+
+        public ActionResult CaregiverEvent()
+        {
+            return View();
+        }
     }
 }

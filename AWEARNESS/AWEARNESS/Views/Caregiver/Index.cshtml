@@ -1,35 +1,66 @@
 ﻿@{
-    Layout = Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
 
 }
 
 @model AWEARNESS.Models.Repository.User
 
-    <input type="text" placeholder="Type your phone number" id="number" /><br>
-    <div id="select"><span>Choose Event</span></div>
-    <p class="repeat">
-        <span>Regular</span>
-    </p>
-    <p class="repeat">
-        <span>Lost</span>
-    </p>
-    <p class="repeat">
-        <span>Fell-Down</span>
-    </p>
-    <p class="repeat">
-        <span>Fainted</span>
-    </p>
-    <p class="repeat">
-        <span>Light-Injury</span>
-    </p>
-    <p class="repeat">
-        <span>Medium-Injury</span>
-    </p>
-    <p class="repeat">
-        <span>Difficult-Injury</span>
-    </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>AWEARNESS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <meta name="viewport" content="user-scalable=no">
+    <link href="~/css/alert_style.css" rel="stylesheet" />
+    <link href="~/css/animate.css" rel="stylesheet" />
+    <script src="~/js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+</head>
+<body>
+    <img id="icon" src="~/images/icon.png" class="wow fadeOut" data-wow-duration="3s" data-wow-delay="0.5s" />
+    <header class="wow fadeIn" data-wow-delay="3.5s">
+        <img id="logo" src="~/images/bar-1.svg" />
+        <img id="main" src="~/images/contant-hole-1.svg" />
+        <img id="picture" src="~/images/old.jpg" />
+        <p id="name"></p>
+        <p id="age"></p>
+    </header>
+    <main class="wow fadeIn" data-wow-delay="3.5s">
+        <input type="text" placeholder="Type your phone number" id="number" /><br>
+        <div id="eventSelect">
+            <div id="select"><span>Choose Event</span></div>
+            <p class="repeat">
+                <span>Regular</span>
+            </p>
+            <p class="repeat">
+                <span>Lost</span>
+            </p>
+            <p class="repeat">
+                <span>Fell-Down</span>
+            </p>
+            <p class="repeat">
+                <span>Fainted</span>
+            </p>
+            <p class="repeat">
+                <span>Light-Injury</span>
+            </p>
+            <p class="repeat">
+                <span>Medium-Injury</span>
+            </p>
+            <p class="repeat">
+                <span>Difficult-Injury</span>
+            </p>
+        </div>
+        <p id="alert_btn">
+            <img id="alertButton" src="images/alert-1.svg" class="alert_btn" />
+        </p>
+    </main>
 
-    <p id="alert_btn"><img src="images/alert-1.svg" class="alert_btn" /></p>
+</body>
+</html>
 
 <script src="~/js/mainScript.js"></script>
 <script>
@@ -37,4 +68,10 @@
     $('#name').text(fullname);
     var age = getAge("@Model.Birthday.ToShortDateString()");
     $('#age').text("Age: " + age);
+    $("#alertButton").click(function () {
+        $('#eventSelect,#number,#alertButton').addClass('animated bounceOutDown');
+    });
+    $('#alertButton').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+        $("main").load("Caregiver/CaregiverEvent");
+    });
 </script>
