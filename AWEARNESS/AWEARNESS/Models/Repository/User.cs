@@ -77,7 +77,22 @@ namespace AWEARNESS.Models.Repository
 
         public User GetUserByQRCode(string i_QRCodeId)
         {
-            User user = m_Users.Values.Where(x => x.QRCodes.All(z => z.QRCodeId == i_QRCodeId)).FirstOrDefault();
+            User user = null;
+            try
+            {
+                foreach(User userFromDB in m_Users.Values)
+                {
+                    if(userFromDB.QRCodes.Any(x=> x.QRCodeId == i_QRCodeId))
+                    {
+                        user = userFromDB;
+                        break;
+                    }
+                }
+            }
+            catch(Exception)
+            {
+
+            }
             return user;
         }
 
