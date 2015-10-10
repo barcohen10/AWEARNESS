@@ -198,3 +198,59 @@ p.repeat {
     top: 0px;
     background-color: green;
 }
+
+.iconsMedicalInfo
+{
+    width: 3%;
+    margin-left: 12%;
+    margin-top: 5%;
+    margin-right: 5%;
+}
+
+.titlesCaregiverEvent
+{
+    color: white;
+    font-weight: bold;
+    font-size: 39px;
+    position: absolute;
+    margin-top: 60px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.activeTab
+{
+    opacity:1;
+}
+
+.unactiveTab
+{
+    opacity:0.6;
+}
+
+#generalInfo, #Diseases
+{
+    border-top: none;
+    border-bottom: 2px solid white;
+    border-left: none;
+    border-right: 2px solid white;
+}
+
+.medicalInfoBox
+{
+     width:99%;
+     position:relative;
+     min-height: 180px;
+}
+
+#Allergies {
+    border-top: none;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    border-right: none;
+}
+#Medicines {
+    border-top: none;
+    border-bottom: none;
+    border-left: 2px solid white;
+    border-right: none;
+}
