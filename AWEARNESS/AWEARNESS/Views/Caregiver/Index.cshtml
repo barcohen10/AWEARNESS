@@ -15,6 +15,7 @@
     <link href="~/css/alert_style.css" rel="stylesheet" />
     <link href="~/css/animate.css" rel="stylesheet" />
     <script src="~/js/wow.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script>
     new WOW().init();
     </script>
@@ -23,10 +24,12 @@
     <img id="icon" src="~/images/icon.png" class="wow fadeOut" data-wow-duration="3s" data-wow-delay="0.5s" />
     <header class="wow fadeIn" data-wow-delay="3.5s">
         <img id="logo" src="~/images/bar-1.svg" />
-        <img id="main" src="~/images/contant-hole-1.svg" />
-        <img id="picture" src="~/images/old.jpg" />
-        <p id="name"></p>
-        <p id="age"></p>
+        <div id="personal">
+            <div id="nameArea" style="text-align:center;" >
+                <p style="font-family: 'Open Sans', sans-serif;" id="name"></p>
+            </div>
+        </div>
+        @*<p id="age"></p>*@
     </header>
     <main class="wow fadeIn" data-wow-delay="3.5s">
         <input type="text" placeholder="Type your phone number" id="number" /><br>

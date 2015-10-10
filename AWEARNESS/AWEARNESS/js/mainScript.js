@@ -3,9 +3,6 @@
     var $selection = $('div#select');
     var select_span = document.getElementById('select').childNodes[0];
     var $number = $('input#number');
-    var name_area = document.getElementById("name");
-    var age_area = document.getElementById("age");
-    var $picture = $('img#picture');
     var window_width = $(window).width();
     var longest = 0;
     //hide event list
@@ -17,22 +14,13 @@
             var elem_width = $($events[i]).first().width();
             if (elem_width > longest) longest = elem_width;
         }
+
         //align by the longest element
-        name_area.style.left = (window_width - $(name_area).width()) / 2 + "px";
-        name_area.style.top = $('img#main').height() * 0.72 + 75 + "px";
-
-        age_area.style.left = (window_width - $(age_area).width()) / 2 + "px";
-        age_area.style.top = $('img#main').height() * 0.88 + 75 + "px";
-
-        select_span.style.paddingLeft = (window_width - longest) / 2 + "px";
-        $number.css('padding-left', (window_width - longest) / 2 + "px");
-
-        $picture.height(0.7 * $('img#main').height());
-        $picture.css('left', (window_width - $picture.width()) / 2 + "px");
-        $picture.css('top', $picture.height() * 0.25 + 75 + "px");
+        select_span.style.paddingLeft = (window_width - longest) / 4 + "px";
+        $number.css('padding-left', (window_width - longest) / 4 + "px");
 
         for (var i = 0; i < $events.length; i++) {
-            $events[i].style.paddingLeft = (window_width - longest) / 2 + "px";
+            $events[i].style.paddingLeft = (window_width - longest) / 4 + "px";
         }
     }
     //apply padding style

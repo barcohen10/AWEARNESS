@@ -5,6 +5,8 @@
 body {
     margin: 0;
     background-color: #252932;
+    width: 100%;
+    height: 100%;
 }
 
 img#logo {
@@ -27,10 +29,14 @@ img#picture {
 }
 
 p#name {
-    position: absolute;
     color: white;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 50px;
+     position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin:0;
 }
 
 p#age {
@@ -48,9 +54,9 @@ input#number, div#select {
     font-size: 40px;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
-    border-left:none;
-    border-right:none;
-    font-family: Arial;
+    border-left: none;
+    border-right: none;
+    font-family: 'Open Sans', sans-serif;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box; /* Firefox, other Gecko */
     box-sizing: border-box; /* Opera/IE 8+ */
@@ -59,7 +65,7 @@ input#number, div#select {
 input#number {
     background-image: url(../images/telephone-white-1-01.svg);
     background-position: 30px 5px;
-    height: 120px;
+    height: 130px;
     background-repeat: no-repeat;
 }
 
@@ -68,13 +74,22 @@ div#select {
     background-position: 30px 5px;
     background-repeat: no-repeat;
     padding-top: 30px;
-    height: 120px;
+    height: 130px;
 }
 
-    div#select:hover {
-        cursor: pointer;
-        background-color: #1C2127;
-    }
+div#nameArea {
+    height: 130px;
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+      background-color: rgba(37,41,50,0.5);
+}
+
+div#select:hover {
+    cursor: pointer;
+    background-color: #1C2127;
+}
 
 p#alert_btn {
     margin-top: 60px;
@@ -104,69 +119,82 @@ p.repeat {
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: white;
-    font-family: Arial;
+    font-family: 'Open Sans', sans-serif;
 }
 
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color: white;
     opacity: 1;
-    font-family: Arial;
+    font-family: 'Open Sans', sans-serif;
 }
 
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
     color: white;
     opacity: 1;
-    font-family: Arial;
+    font-family: 'Open Sans', sans-serif;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: white;
-    font-family: Arial;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
-#tabs
-{
-    width:100%;
+#tabs {
+    width: 100%;
 }
 
-.tabsIcons
-{
-    width:33%;
+.tabsIcons {
+    width: 33%;
 }
 
+#personal {
+    background-image: url('../images/old-man.jpg');
+    height: 34vh;
+    width: 100%;
+    position: relative;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 
 
 
 /*CENTER ICON ON RESPONSIVE PAGE///////////////////////////////////*/
-#icon
-{
-	position: absolute;
-	max-width: 80%;
-	top: 10%;
-	left: 10%;
+#icon {
+    position: absolute;
+    max-width: 80%;
+    top: 10%;
+    left: 10%;
 }
 
-#icon:empty
-{
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	-o-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
+    #icon:empty {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
 
 @media screen and (orientation: portrait) {
-  #icon {
-      max-width: 90%;
-  }
+    #icon {
+        max-width: 90%;
+    }
 }
 
 @media screen and (orientation: landscape) {
-  #icon {
-      max-height: 90%;
-  }
+    #icon {
+        max-height: 90%;
+    }
 }
 /*///////////////////////////////////////////////////////////////////*/
+
+
+.tag {
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: green;
+}
