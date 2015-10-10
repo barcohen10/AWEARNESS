@@ -157,6 +157,7 @@
     <Content Include="images\old-man.jpg" />
     <Content Include="images\old.jpg" />
     <Content Include="images\telephone-white-1-01.svg" />
+    <Content Include="js\chat.js" />
     <Content Include="js\mainScript.js" />
     <Content Include="js\wow.min.js" />
     <Content Include="Web.config">

@@ -146,6 +146,7 @@ p.repeat {
 
 .tabsIcons {
     width: 33%;
+    float:left;
 }
 
 #personal {
@@ -253,4 +254,22 @@ p.repeat {
     border-bottom: none;
     border-left: 2px solid white;
     border-right: none;
+}
+.textMedicalInfo
+{
+    color: white;
+    font-size: 15px;
+    margin-left: 20%;
+    max-width: 70%;
+    margin-top:10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.activeTabDiv
+{
+    display:block;
+}
+.unactiveTabDiv
+{
+    display:none;
 }

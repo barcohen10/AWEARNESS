@@ -75,6 +75,8 @@
         $('#eventSelect,#number,#alertButton').addClass('animated bounceOutDown');
     });
     $('#alertButton').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-        $("main").load("Caregiver/CaregiverEvent");
+        $("main").load("Caregiver/CaregiverEvent", function () {
+            setOtherDetails("@Model.SpecialInstructions", "@Model.Allergies", "@Model.Diseases", "@Model.Medicines");
+        });
     });
 </script>

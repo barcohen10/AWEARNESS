@@ -53,7 +53,17 @@
             console.log(alert);
         }
     });
+
+    $("#medicalTab").click(function () {
+        switchTabs("medicalTab", "medicalInfo");
+    });
+    $("#chatTab").click(function () {
+        switchTabs("chatTab", "chat");
+    });
+
+
 });
+
 function getAge(dateString) {
     var dateArr = dateString.split("/");
     var today = new Date();
@@ -64,4 +74,31 @@ function getAge(dateString) {
         age--;
     }
     return age;
+}
+
+function setOtherDetails(generalInfo, allergies, diseases, medicines)
+{
+    $('#generalInfoText').text(generalInfo);
+    allergiesArray = allergies.split("~!"); //backspace
+    diseasesArray = diseases.split("~!"); //backspace
+    medicinesArray = medicines.split("~!"); //backspace
+    var allergiesHtml = '';
+    var diseasesHtml = '';
+    var medicinesHtml = '';
+    $.each(allergiesArray, function (index, value) {
+        allergiesHtml += value + "</br>";
+    });
+    $.each(diseasesArray, function (index, value) {
+        diseasesHtml += value + "</br>";
+    });
+    $.each(medicinesArray, function (index, value) {
+        medicinesHtml += value + "</br>";
+    });
+    $('#allergiesList').html(allergiesHtml);
+    $('#diseasesList').html(diseasesHtml);
+    $('#medicinesList').html(medicinesHtml);
+
+
+
+
 }

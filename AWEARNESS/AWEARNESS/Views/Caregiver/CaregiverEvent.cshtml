@@ -3,26 +3,72 @@
 
 }
 
-<div id="tabs" class="wow bounceInUp">
-    <img class="tabsIcons activeTab" src="~/images/Medical Info/medicalInfo.svg" />
-    <img class="tabsIcons unactiveTab" src="~/images/Medical Info/contacts.svg" />
-    <img class="tabsIcons unactiveTab" src="~/images/Medical Info/chat.svg" />
+<div id="tabs" class="wow bounceInUp" style="height:150px">
+    <img id="medicalTab" class="tabsIcons activeTab" src="~/images/Medical Info/medicalInfo.svg" />
+    <img id="contactsTab" class="tabsIcons unactiveTab" src="~/images/Medical Info/contacts.svg" />
+    <img id="chatTab" class="tabsIcons unactiveTab" src="~/images/Medical Info/chat.svg" />
 </div>
-<div id="medicalInfo" style="width:100%">
-    <div id="generalInfo" class="medicalInfoBox">
-        <img class="iconsMedicalInfo" src="~/images/Medical Info/GeneralInfoIcon.svg" />
-        <span class="titlesCaregiverEvent">General Information</span>
+<div id="divTabs" class="wow bounceInUp">
+    <div id="medicalInfo" style="width:100%" class="activeTabDiv tabDiv">
+        <div id="generalInfo" class="medicalInfoBox">
+            <img class="iconsMedicalInfo" src="~/images/Medical Info/GeneralInfoIcon.svg" />
+            <span class="titlesCaregiverEvent">General Information</span>
+            <p id="generalInfoText" class="textMedicalInfo"></p>
+        </div>
+        <div id="Allergies" class="medicalInfoBox">
+            <img class="iconsMedicalInfo" src="~/images/Medical Info/Allergies.svg" />
+            <span class="titlesCaregiverEvent">Allergies</span>
+            <p id="allergiesList" class="textMedicalInfo"></p>
+        </div>
+        <div id="Diseases" class="medicalInfoBox">
+            <img class="iconsMedicalInfo" src="~/images/Medical Info/Diseases.svg" />
+            <span class="titlesCaregiverEvent">Diseases</span>
+            <p id="diseasesList" class="textMedicalInfo" style="margin-top: 35px;"></p>
+        </div>
+        <div id="Medicines" class="medicalInfoBox">
+            <img class="iconsMedicalInfo" src="~/images/Medical Info/Medicines.svg" />
+            <span class="titlesCaregiverEvent">Medicines</span>
+            <p id="medicinesList" class="textMedicalInfo"></p>
+        </div>
     </div>
-    <div id="Allergies" class="medicalInfoBox">
-        <img class="iconsMedicalInfo" src="~/images/Medical Info/Allergies.svg" />
-        <span class="titlesCaregiverEvent">Allergies</span>
-    </div>
-    <div id="Diseases" class="medicalInfoBox">
-        <img class="iconsMedicalInfo" src="~/images/Medical Info/Diseases.svg" />
-        <span class="titlesCaregiverEvent">Diseases</span>
-    </div>
-    <div id="Medicines" class="medicalInfoBox">
-        <img class="iconsMedicalInfo" src="~/images/Medical Info/Medicines.svg" />
-        <span class="titlesCaregiverEvent">Medicines</span>
-    </div>
+    <div id="chat" style="width:100%" class="unactiveTabDiv tabDiv"></div>
+    <div id="contacts" style="width:100%" class="unactiveTabDiv tabDiv"></div>
+
 </div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#medicalTab").click(function () {
+            switchTabs("medicalTab", "medicalInfo");
+        });
+        $("#chatTab").click(function () {
+            switchTabs("chatTab", "chat");
+        });
+        function switchTabs(tabName, divName) {
+            $("#tabs img").each(function (index) {
+                if ($(this).attr('id') != tabName) {
+                    $(this).addClass("unactiveTab");
+                    $(this).removeClass("activeTab");
+                }
+                else {
+                    $(this).addClass("activeTab");
+                    $(this).removeClass("unactiveTab");
+                }
+            });
+
+            $(".tabDiv").each(function (index) {
+                if ($(this).attr('id') != divName) {
+                    $(this).addClass("unactiveTabDiv");
+                    $(this).removeClass("activeTabDiv");
+                }
+                else {
+                    $(this).addClass("activeTabDiv");
+                    $(this).removeClass("unactiveTabDiv");
+                }
+            });
+        }
+    });
+
+</script>
+
