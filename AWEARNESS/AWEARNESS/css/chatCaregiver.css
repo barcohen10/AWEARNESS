@@ -1,0 +1,59 @@
+﻿#chat {
+	margin:0;
+	padding: 20px 6% 20px 6%;
+	}
+div.message {
+	background-color:rgba(255,255,255,0.6);
+	padding:15px;
+	margin-top:15px;
+}
+
+div.message span {
+	color:white;
+	font-size:25px;
+}
+#txtMessage {
+	width:94%;
+	box-sizing:border-box;
+	background-color:#252932;
+	padding-bottom:15px;
+	padding-left:0;
+	border:none;
+	border-bottom:2px solid white;
+	font-size:25px;
+	color:white;
+	height:35px;
+}
+#txtMessage:focus {
+	outline:none;
+	border-bottom:2px solid white;
+}
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+:-ms-input-placeholder {  
+   color: white;  
+}
+#arrowChat {
+	width:5%;
+	height:50px;
+	position:relative;
+	top:15px;
+	left:10px;
+}
+
+#submit
+{
+    margin-top: 5%;
+    margin-left: 15%; 
+    width: 65%;
+}

@@ -34,8 +34,8 @@
     <div id="chat" style="width:100%" class="unactiveTabDiv tabDiv">
         <div id="chat_area"></div>
 
-        <input type="text" placeholder="Type message..." />
-        <img alt="type" src="~/images/Medical Info/arrowChat.svg" />
+        <input id="txtMessage" type="text" placeholder="Type message..." />
+        <img id="arrowChat" alt="type" src="~/images/Medical Info/arrowChat.svg" />
     </div>
     <div id="contacts" style="width:100%" class="unactiveTabDiv tabDiv"></div>
 
@@ -76,4 +76,35 @@
     });
 
 </script>
+<link href="~/css/chatCaregiver.css" rel="stylesheet" />
+<script>
+    var input = document.getElementById('txtMessage');
+    var chat_area = document.getElementById('chat_area');
+    var send = document.getElementById('arrowChat');
 
+    send.addEventListener('click', function () {
+        if (input.value.trim() == "") return;
+
+        var message_box = document.createElement('DIV');
+        message_box.setAttribute('class', 'message');
+        var content = document.createElement('SPAN');
+        var date = document.createElement('SPAN');
+        var clear_div = document.createElement('DIV');
+
+        var d = new Date();
+        content.style.float = 'left';
+        date.style.float = 'right';
+        clear_div.style.clear = 'both';
+        content.textContent = input.value.trim();
+        date.textContent = d.toTimeString().substr(0, 8);
+
+        message_box.appendChild(content);
+        message_box.appendChild(date);
+        message_box.appendChild(clear_div);
+        chat_area.appendChild(message_box);
+        input.value = "";
+
+    });
+
+
+</script>

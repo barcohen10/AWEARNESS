@@ -29,7 +29,6 @@
                 <p style="font-family: 'Open Sans', sans-serif;" id="name"></p>
             </div>
         </div>
-        @*<p id="age"></p>*@
     </header>
     <main class="wow fadeIn" data-wow-delay="3.5s">
         <input type="text" placeholder="Type your phone number" id="number" /><br>
@@ -61,7 +60,6 @@
             <img id="alertButton" src="images/alert-1.svg" class="alert_btn" />
         </p>
     </main>
-
 </body>
 </html>
 
@@ -71,6 +69,7 @@
     $('#name').text(fullname);
     var age = getAge("@Model.Birthday.ToShortDateString()");
     $('#age').text("Age: " + age);
+
     $("#alertButton").click(function () {
         $('#eventSelect,#number,#alertButton').addClass('animated bounceOutDown');
     });

@@ -105,6 +105,19 @@ namespace AWEARNESS.Models.Repository
             return QRCode;
         }
 
+        public bool IsPasswordOk(string i_Id, string i_Password)
+        {
+            bool result = false;
+            QRCode qrCode = m_DB.QRCodes.Find(i_Id);
+            if (qrCode != null && qrCode.Password.Equals(i_Password))
+            {
+                result = true;
+            }
+
+            return result;
+        }
+
+
 
     }
 

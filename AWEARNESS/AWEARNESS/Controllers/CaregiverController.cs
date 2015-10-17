@@ -12,19 +12,31 @@ namespace AWEARNESS.Controllers
         //
         // GET: /Caregiver/
 
-        public ActionResult Index(string qrCodeId)
+        public ActionResult Index(string qrCodeId, string password)
         {
             User user = UserMng.Instance.GetUserByQRCode(qrCodeId);
-            if (user == null)
+            if (user == null || !QrCodeMng.Instance.IsPasswordOk(qrCodeId, password))
             {
                 return HttpNotFound();
             }
+
             return View(user);
+        }
+
+        public ActionResult Login(string qrCodeId)
+        {
+            return View();
         }
 
         public ActionResult CaregiverEvent()
         {
             return View();
+        }
+
+        [HttpGet]
+        public string IsQRCodePasswordOk(string qrCodeId, string password)
+        {
+            return QrCodeMng.Instance.IsPasswordOk(qrCodeId, password).ToString();
         }
     }
 }
