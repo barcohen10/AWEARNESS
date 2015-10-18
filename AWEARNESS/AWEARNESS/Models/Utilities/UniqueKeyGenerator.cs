@@ -32,6 +32,16 @@ namespace AWEARNESS.Models.Utilities
                                    .Select(x => input[rnd.Next(0, input.Length)]);
             return new string(chars.ToArray());
         }
+        public string GetNumbericPinCode(int i_Length)
+        {
+            Random rnd = new Random();
+            string outputString = "";
+            for (int i = 0; i < i_Length; i++)
+            {
+                outputString += rnd.Next(0, 9);
+            }
+            return outputString;
+        }
     }
      
 }

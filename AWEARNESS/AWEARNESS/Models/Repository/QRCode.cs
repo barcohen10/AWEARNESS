@@ -15,7 +15,7 @@ namespace AWEARNESS.Models.Repository
     {
         public QRCode()
         {
-            Pin = UniqueKeyGenerator.Instance.GetPinCode(7);
+            //Pin = UniqueKeyGenerator.Instance.GetPinCode(7);
         }
         [Key]
         public string Pin { get; set; }
@@ -72,6 +72,7 @@ namespace AWEARNESS.Models.Repository
 
         public void CreateQRCode(QRCode i_QRCode)
         {
+            
             if (!m_QRCodes.ContainsKey(i_QRCode.Pin))
             {
                 m_QRCodes.Add(i_QRCode.Pin, i_QRCode);

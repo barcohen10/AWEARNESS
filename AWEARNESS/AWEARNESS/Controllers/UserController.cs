@@ -36,6 +36,7 @@ namespace AWEARNESS.Controllers
         {
             if (ModelState.IsValid)
             {
+                user.Registration = DateTime.Now;
                 UserMng.Instance.CreateUser(user);
                 return RedirectToAction("Index");
             }
