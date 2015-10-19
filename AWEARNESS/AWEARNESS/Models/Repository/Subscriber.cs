@@ -36,7 +36,6 @@ namespace AWEARNESS.Models.Repository
         {
             Subscriber sub= new Subscriber();
             sub.Time=DateTime.Now;
-
             sub.Id = Guid.NewGuid();
             sub.Email=i_Email;
             sub.IP = NetworkUtilites.Instance.getUserIP(i_Controller);

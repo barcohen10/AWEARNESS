@@ -11,9 +11,20 @@
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'></script>
     <script src="~/js/jquery.tipsy.js"></script>
     <script type='text/javascript'>
-		$(function() {
-			$('#tipsy').tipsy({fade: true, gravity: 's'});
-		});
+        //$(function() {
+        //    $('#tipsy').tipsy({fade: true, gravity: 's'});
+        //});
+        //$(document).ready(function ()
+        //{
+        //    $('#subscribebtn').click(function ()
+        //    {
+        //        console.log("subscribed")
+        //        var inputEmail = $('#emailtxt').val();
+        //        $.post("/Home/Subscribe", { email: inputEmail }, function () { }, function () { })
+        //    })
+        //});
+
+     
     </script>
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -39,8 +50,8 @@
         <section class="mailing-list">
             <h2 style="color:white">Want to be the first to know when we're ready?</h2>
             <form>
-                <input type="text" value="your@email.com" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
-                <input type="submit" value="Subscribe">
+                <input type="text" id="emailtxt" value="your@email.com" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
+                <input type="submit" id="subscribebtn" value="Subscribe">
             </form>
         </section><div class="clear"></div>
         <div class="hr"></div>
