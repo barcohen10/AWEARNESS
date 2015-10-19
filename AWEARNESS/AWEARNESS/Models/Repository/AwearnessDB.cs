@@ -13,5 +13,7 @@ namespace AWEARNESS.Models.Repository
         public DbSet<UserQRCodes> UserQRCodes { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<UserEvents> UserEvents { get; set; }
+        public DbSet<Subscriber> Subscribers { get; set; }
+
     }
 }

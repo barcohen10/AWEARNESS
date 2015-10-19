@@ -10,6 +10,7 @@ namespace AWEARNESS.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+
         }
 
         protected override void Seed(AWEARNESS.Models.Repository.AwearnessDB context)

@@ -126,17 +126,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201510170811249_change in qrcode.cs" />
-    <Compile Include="Migrations\201510170811249_change in qrcode.Designer.cs">
-      <DependentUpon>201510170811249_change in qrcode.cs</DependentUpon>
+    <Compile Include="Migrations\201510190155365_subscriber addon.cs" />
+    <Compile Include="Migrations\201510190155365_subscriber addon.Designer.cs">
+      <DependentUpon>201510190155365_subscriber addon.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Repository\AwearnessDB.cs" />
     <Compile Include="Models\Repository\Event.cs" />
     <Compile Include="Models\Repository\QRCode.cs" />
+    <Compile Include="Models\Repository\Subscriber.cs" />
     <Compile Include="Models\Repository\User.cs" />
     <Compile Include="Models\Repository\UserEvents.cs" />
     <Compile Include="Models\Repository\UserQRCodes.cs" />
+    <Compile Include="Models\Utilities\NetworkUtilites.cs" />
     <Compile Include="Models\Utilities\UniqueKeyGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -242,12 +244,12 @@
     <Content Include="Views\Caregiver\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201510170811249_change in qrcode.resx">
-      <DependentUpon>201510170811249_change in qrcode.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="Properties\PublishProfiles\awearness.pubxml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\PublishProfiles\awearness.pubxml" />
+    <EmbeddedResource Include="Migrations\201510190155365_subscriber addon.resx">
+      <DependentUpon>201510190155365_subscriber addon.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

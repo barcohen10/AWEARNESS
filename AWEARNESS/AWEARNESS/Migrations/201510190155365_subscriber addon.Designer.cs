@@ -5,13 +5,13 @@ namespace AWEARNESS.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class changeinqrcode : IMigrationMetadata
+    public sealed partial class subscriberaddon : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(changeinqrcode));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(subscriberaddon));
         
         string IMigrationMetadata.Id
         {
-            get { return "201510170811249_change in qrcode"; }
+            get { return "201510190155365_subscriber addon"; }
         }
         
         string IMigrationMetadata.Source
