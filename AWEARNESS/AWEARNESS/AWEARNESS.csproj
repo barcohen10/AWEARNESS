@@ -168,6 +168,13 @@
     <Content Include="images\ComingSoon\txt-launch-day-hat.png" />
     <Content Include="images\ComingSoon\txt-launch-day.png" />
     <Content Include="images\contact-icon-1.svg" />
+    <Content Include="images\users\0503546454.jpg" />
+    <Content Include="images\users\0509165824.jpg" />
+    <Content Include="images\users\0523891844.jpg" />
+    <Content Include="images\users\0526148762.jpg" />
+    <Content Include="images\users\0526267694.jpg" />
+    <Content Include="images\users\0526353547.jpg" />
+    <Content Include="images\users\0526881855.jpg" />
     <Content Include="images\users\0543377272.jpg" />
     <Content Include="images\Medical Info\arrowChat.svg" />
     <Content Include="images\bar-1.svg" />
@@ -238,6 +245,9 @@
     <EmbeddedResource Include="Migrations\201510170811249_change in qrcode.resx">
       <DependentUpon>201510170811249_change in qrcode.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\awearness.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
