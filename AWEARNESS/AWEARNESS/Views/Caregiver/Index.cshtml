@@ -68,6 +68,7 @@
     var fullname = "@Model.FirstName" + " " + "@Model.LastName";
     $('#name').text(fullname);
     var age = getAge("@Model.Birthday.ToShortDateString()");
+    var userID = @Model.PhoneNumber;
     var backgroundImageUrl = '../user/getimage?userid=0' +@Model.PhoneNumber;
     $("#personal").css('background-image', 'url('+backgroundImageUrl+')');
     $('#age').text("Age: " + age);
@@ -78,6 +79,7 @@
     $('#alertButton').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
         $("main").load("Caregiver/CaregiverEvent", function () {
             setOtherDetails("@Model.SpecialInstructions", "@Model.Allergies", "@Model.Diseases", "@Model.Medicines");
+       
         });
     });
 
