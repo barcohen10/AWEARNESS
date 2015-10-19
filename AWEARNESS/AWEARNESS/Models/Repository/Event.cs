@@ -40,7 +40,6 @@ namespace AWEARNESS.Models.Repository
                 this.m_Events.Add(eventt.Id.ToString(), eventt);
             }
         }
-
         public static EventMng Instance
         {
             get
