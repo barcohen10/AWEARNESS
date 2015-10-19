@@ -236,7 +236,8 @@ p.repeat {
     border-right: 2px solid white;
 }
 
-.medicalInfoBox
+.
+
 {
      width:99%;
      position:relative;
@@ -272,4 +273,37 @@ p.repeat {
 .unactiveTabDiv
 {
     display:none;
+}
+div.contactBar {
+	width:100%;
+	box-sizing:border-box;
+	background-color:#252932;
+	padding:22px;
+	border:none;
+	border-top:1px solid white;
+	border-bottom:1px solid white;
+	display:table;
+}
+div.contactBar span {
+	color:white;
+	font-size:36px;
+	padding-left:1%;
+	text-align:left;
+	display:table-cell;
+	vertical-align:middle;
+}
+div.contactBar img.contactImg {
+	width:50px;
+	height:55px;
+	padding-left:22%;
+	display:table-cell;
+	vertical-align:middle;
+}
+div.contactBar img.phone {
+	width:55px;
+	height:60px;
+	float:right;
+	display:table-cell;
+	vertical-align:middle;
+	padding-right:20%;
 }

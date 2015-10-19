@@ -2,8 +2,7 @@
     Layout = null ;
 
 }
-
-<div id="tabs" class="wow bounceInUp" style="height:150px">
+<<div id="tabs" class="wow bounceInUp" style="height:150px">
     <img id="medicalTab" class="tabsIcons activeTab" src="~/images/Medical Info/medicalInfo.svg" />
     <img id="contactsTab" class="tabsIcons unactiveTab" src="~/images/Medical Info/contacts.svg" />
     <img id="chatTab" class="tabsIcons unactiveTab" src="~/images/Medical Info/chat.svg" />
@@ -37,7 +36,23 @@
         <input id="txtMessage" type="text" placeholder="Type message..." />
         <img id="arrowChat" alt="type" src="~/images/Medical Info/arrowChat.svg" />
     </div>
-    <div id="contacts" style="width:100%" class="unactiveTabDiv tabDiv"></div>
+    <div id="contacts" style="width:100%" class="unactiveTabDiv tabDiv">
+
+        <div class="contactBar">
+            <img class="contactImg" src="images/contact-icon-1.svg" />
+            <span>Daughter- Dana</span>
+            <img class="phone" src="images/telephone-white-1-01.svg" />
+            <div class="clear"></div>
+        </div>
+
+        <div class="contactBar">
+            <img class="contactImg" src="images/contact-icon-1.svg" />
+            <span>Doctor- Tania</span>
+            <img class="phone" src="images/telephone-white-1-01.svg" />
+            <div class="clear"></div>
+        </div>
+
+    </div>
 
 </div>
 
@@ -49,6 +64,9 @@
         });
         $("#chatTab").click(function () {
             switchTabs("chatTab", "chat");
+        });
+        $("#contactsTab").click(function () {
+            switchTabs("contactsTab", "contacts");
         });
         function switchTabs(tabName, divName) {
             $("#tabs img").each(function (index) {
