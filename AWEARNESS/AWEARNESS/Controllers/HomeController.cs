@@ -25,7 +25,7 @@ namespace AWEARNESS.Controllers
             EmailAddressAttribute emailValidator = new EmailAddressAttribute();
             if (!string.IsNullOrEmpty(email) && !email.Equals("your@email.com") && emailValidator.IsValid(email))
             {
-                SubscriberMng.Instance.CreateQRCode(email, this);
+                SubscriberMng.Instance.CreateAndAddSubscriber(email, this);
                 returnValue = "true";
             }
             return returnValue;

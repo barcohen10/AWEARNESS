@@ -32,7 +32,7 @@ namespace AWEARNESS.Models.Repository
         }
 
 
-        public void CreateQRCode(string i_Email,Controller i_Controller)
+        public void CreateAndAddSubscriber(string i_Email,Controller i_Controller)
         {
             Subscriber sub= new Subscriber();
             sub.Time=DateTime.Now;
