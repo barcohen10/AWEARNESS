@@ -38,5 +38,7 @@ namespace AWEARNESS.Controllers
         {
             return QrCodeMng.Instance.IsPasswordOk(qrCodeId, password).ToString();
         }
+
+
     }
 }

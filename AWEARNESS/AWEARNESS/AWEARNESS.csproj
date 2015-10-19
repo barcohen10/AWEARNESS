@@ -136,6 +136,7 @@
     <Compile Include="Models\Repository\QRCode.cs" />
     <Compile Include="Models\Repository\Subscriber.cs" />
     <Compile Include="Models\Repository\User.cs" />
+    <Compile Include="Models\Repository\UserContacts.cs" />
     <Compile Include="Models\Repository\UserEvents.cs" />
     <Compile Include="Models\Repository\UserQRCodes.cs" />
     <Compile Include="Models\Utilities\NetworkUtilites.cs" />

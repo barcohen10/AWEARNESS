@@ -26,6 +26,12 @@ namespace AWEARNESS.Controllers
             var path = Path.Combine(dir, userid + ".jpg");
             return base.File(path, "image/jpeg");
         }
+        //        [HttpGet]
+        //public JsonResult GetCargivers(string userid)
+        //{
+
+
+        //}
         //
         // GET: /User/Create
 
