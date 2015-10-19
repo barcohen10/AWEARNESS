@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using AWEARNESS.Models.Repository;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace AWEARNESS.Controllers
 {
@@ -19,20 +20,34 @@ namespace AWEARNESS.Controllers
         {
             return View(UserMng.Instance.AllUsers);
         }
-
+      public  AwearnessDB m_AwearnessDB = new AwearnessDB();
         public ActionResult GetImage(string userid)
         {
             var dir = Server.MapPath("/Images/Users");
             var path = Path.Combine(dir, userid + ".jpg");
             return base.File(path, "image/jpeg");
         }
-        //        [HttpGet]
-        //public JsonResult GetCargivers(string userid)
-        //{
+        [HttpGet]
+        public JsonResult GetContacts(string userid)
+        {
+            string data = string.Empty;
+            List<string> contactStrings = new List<string>();
+            List<UserContacts> contacts = m_AwearnessDB.UserContacts.Where(x => x.UserId == userid).ToList();
+           User contact=null;
+            foreach(UserContacts userContact in contacts)
+            {
+                contact = UserMng.Instance.GetUser(userContact.ContactUserId);
+                contactStrings.Add("[" + userContact.Relationship + "] " + contact.FirstName + " " + contact.LastName);
+            }
+       
 
-
-        //}
-        //
+                if (contactStrings.Count >0)
+                {
+                    data = JsonConvert.SerializeObject(new { contacts = contactStrings });
+                }
+                return Json(data, JsonRequestBehavior.AllowGet);
+        }
+        
         // GET: /User/Create
 
         public ActionResult Create()
