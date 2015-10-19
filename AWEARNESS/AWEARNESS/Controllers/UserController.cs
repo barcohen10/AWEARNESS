@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AWEARNESS.Models.Repository;
+using System.IO;
 
 namespace AWEARNESS.Controllers
 {
@@ -19,6 +20,12 @@ namespace AWEARNESS.Controllers
             return View(UserMng.Instance.AllUsers);
         }
 
+        public ActionResult GetImage(string userid)
+        {
+            var dir = Server.MapPath("/Images/Users");
+            var path = Path.Combine(dir, userid + ".jpg");
+            return base.File(path, "image/jpeg");
+        }
         //
         // GET: /User/Create
 

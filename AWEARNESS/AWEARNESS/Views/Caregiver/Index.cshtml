@@ -68,6 +68,8 @@
     var fullname = "@Model.FirstName" + " " + "@Model.LastName";
     $('#name').text(fullname);
     var age = getAge("@Model.Birthday.ToShortDateString()");
+    var backgroundImageUrl = '../user/getimage?userid=0' +@Model.PhoneNumber;
+    $("#personal").css('background-image', 'url('+backgroundImageUrl+')');
     $('#age').text("Age: " + age);
 
     $("#alertButton").click(function () {
@@ -78,4 +80,6 @@
             setOtherDetails("@Model.SpecialInstructions", "@Model.Allergies", "@Model.Diseases", "@Model.Medicines");
         });
     });
+
+  
 </script>
