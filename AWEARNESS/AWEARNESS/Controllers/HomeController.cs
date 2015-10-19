@@ -2,6 +2,7 @@
 using AWEARNESS.Models.Utilities;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -16,15 +17,18 @@ namespace AWEARNESS.Controllers
         {
             return View();
         }
-        //public ActionResult Subscribe(Subscriber subscriber)
-        //{
-        //    return "";
-        //}
+
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public void Subscribe(string email)
+        public string Subscribe(string email)
         {
-            SubscriberMng.Instance.CreateQRCode(email,this);
+            string returnValue = "false";
+            EmailAddressAttribute emailValidator = new EmailAddressAttribute();
+            if (!string.IsNullOrEmpty(email) && !email.Equals("your@email.com") && emailValidator.IsValid(email))
+            {
+                SubscriberMng.Instance.CreateQRCode(email, this);
+                returnValue = "true";
+            }
+            return returnValue;
         }
 
     }

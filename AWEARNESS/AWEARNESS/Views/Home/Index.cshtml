@@ -11,19 +11,32 @@
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'></script>
     <script src="~/js/jquery.tipsy.js"></script>
     <script type='text/javascript'>
-        //$(function() {
-        //    $('#tipsy').tipsy({fade: true, gravity: 's'});
-        //});
-        //$(document).ready(function ()
-        //{
-        //    $('#subscribebtn').click(function ()
-        //    {
-        //        console.log("subscribed")
-        //        var inputEmail = $('#emailtxt').val();
-        //        $.post("/Home/Subscribe", { email: inputEmail }, function () { }, function () { })
-        //    })
-        //});
+        $(function() {
+            $('#tipsy').tipsy({fade: true, gravity: 's'});
+        });
+        $(document).ready(
+            function () {
 
+                $('#subscribebtn').click(function () {
+                    var url = "/Home/Subscribe";
+                    var inputEmail = $("#emailtxt").val();
+                    $.post(url, { email: inputEmail }, function (data)
+                    {
+                        if (data == 'false') {
+
+                            $('#errorMessage').css("visibility", "visible");
+                        }
+                        else {
+                            var mainWrapper = $('#mainWrapper"');
+                            mainWrapper.empty();
+                            mainWrapper.html('<img src="images/ComingSoon/AWEARNESS.png" alt="AWEARNESS" title="AWEARNESS" style="width:55%" /><div class="hr"></div><h1 style="color:white">See you soon !</h1><p>U</strong></p>')
+                        };
+
+                    });
+
+
+                });
+            });
      
     </script>
     <!--[if IE]>
@@ -32,7 +45,7 @@
 
 </head>
 <body>
-    <div class="wrapper">
+    <div id="mainWrapper" class="wrapper">
         <img src="images/ComingSoon/AWEARNESS.png" alt="AWEARNESS" title="AWEARNESS" style="width:55%" />
         <div class="hr"></div>
         <h1 style="color:white">Coming Soon! Be Aware</h1>
@@ -52,6 +65,8 @@
             <form>
                 <input type="text" id="emailtxt" value="your@email.com" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
                 <input type="submit" id="subscribebtn" value="Subscribe">
+                <p id="errorMessage" style="color:red; visibility:hidden;">Please type in your email</p>
+
             </form>
         </section><div class="clear"></div>
         <div class="hr"></div>
