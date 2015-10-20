@@ -10,19 +10,26 @@ div.message {
 
 div.message span {
 	color:white;
-	font-size:25px;
+	font-size:46px;
+	padding:0px 15px 0px 15px;
+}
+div#input_area {
+	width:86%;
+	margin-left:6%;
+	position:absolute;
+	bottom:90px;
 }
 #txtMessage {
-	width:94%;
+	width:91%;
 	box-sizing:border-box;
 	background-color:#252932;
 	padding-bottom:15px;
 	padding-left:0;
 	border:none;
 	border-bottom:2px solid white;
-	font-size:25px;
+	font-size:46px;
 	color:white;
-	height:35px;
+	height:55px;
 }
 #txtMessage:focus {
 	outline:none;
@@ -44,8 +51,8 @@ div.message span {
    color: white;  
 }
 #arrowChat {
-	width:5%;
-	height:50px;
+	width:8%;
+	height:60px;
 	position:relative;
 	top:15px;
 	left:10px;
