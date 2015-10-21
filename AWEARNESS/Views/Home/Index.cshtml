@@ -1,0 +1,75 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AWEARNESS</title>
+    <link href="~/css/comingsoon.css" rel="stylesheet" />
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'></script>
+    <script src="~/js/jquery.tipsy.js"></script>
+    <script type='text/javascript'>
+        $(function() {
+            $('#tipsy').tipsy({fade: true, gravity: 's'});
+        });
+        $(document).ready(
+            function () {
+
+                $('#subscribebtn').click(function () {
+                    var url = "/Home/Subscribe";
+                    var inputEmail = $("#emailtxt").val();
+                    $.post(url, { email: inputEmail }, function (data)
+                    {
+                        if (data == 'false') {
+
+                            $('#errorMessage').css("visibility", "visible");
+                        }
+                        else {
+                            var mainWrapper = $('#mainWrapper"');
+                            mainWrapper.empty();
+                            mainWrapper.html('<img src="images/ComingSoon/AWEARNESS.png" alt="AWEARNESS" title="AWEARNESS" style="width:55%" /><div class="hr"></div><h1 style="color:white">See you soon !</h1><p>U</strong></p>')
+                        };
+
+                    });
+
+
+                });
+            });
+     
+    </script>
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div id="mainWrapper" class="wrapper">
+        <img src="images/ComingSoon/AWEARNESS.png" alt="AWEARNESS" title="AWEARNESS" style="width:55%" />
+        <div class="hr"></div>
+        <h1 style="color:white">Coming Soon! Be Aware</h1>
+        <p>Unfortunately, we’re not quite ready yet. <strong> But, you can see our progress below:</strong></p>
+
+        <section class="progress">
+            <div class="progress-bar-container" id="tipsy" title="87% Complete">
+                <!-- Edit this title for the tooltip pop up -->
+                <article class="progress-bar" style="width:87%"></article> <!-- Edit the width percentage value to indicate progress -->
+            </div>
+            <article class="txt-launch-day-hat"></article>
+        </section>
+
+        <div class="hr"></div>
+        <section class="mailing-list">
+            <h2 style="color:white">Want to be the first to know when we're ready?</h2>
+            <form>
+                <input type="text" id="emailtxt" value="your@email.com" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
+                <input type="submit" id="subscribebtn" value="Subscribe">
+                <p id="errorMessage" style="color:red; visibility:hidden;">Please type in your email</p>
+
+            </form>
+        </section><div class="clear"></div>
+        <div class="hr"></div>
+    </div>
+</body>
+</html>

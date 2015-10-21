@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,700' rel='stylesheet' type='text/css' />
+    <link href="~/css/loginCaregiver.css" rel="stylesheet" />
+    <meta name="viewport" content="user-scalable=no">
+</head>
+
+<body>
+	<p id="logo">A<span style="font-weight:800;">WEAR</span>NESS</p>
+    <p id="smiley_wrapper"><img id="smiley" src="~/images/smily-icon-01.svg" /></p>
+	<h2 class="bold">We are so happy you are trying to help!</h2>
+	<h2>Under the product there is pin number it</h2>
+	<h2 class="bold">Looks like this: a1b2</h2>
+	<input type="text" id="pinput" placeholder="Enter pin code here" maxlength="4"/>
+    <p class="submit"><img id="submit" src="~/images/sumbit-icon.svg" /></p>
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+        $("#submit").click(function () {
+            var password = $('#pinput').val();
+            var qrcodeId = getQueryVariable('qrcodeid');
+
+            $.get("/caregiver/IsQRCodePasswordOk", { qrCodeId: qrcodeId, password: password })
+            .done(function (data) {
+                if (data == 'True') {
+                    location.href = '/caregiver?qrcodeid=' + qrcodeId + '&password=' + password;
+                }
+                else
+                {
+                    $('#errorMessage').css("visibility", "visible");
+                }
+            });
+        });
+    });
+
+
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] == variable) {
+                return pair[1];
+            }
+        }
+    }
+
+</script>
