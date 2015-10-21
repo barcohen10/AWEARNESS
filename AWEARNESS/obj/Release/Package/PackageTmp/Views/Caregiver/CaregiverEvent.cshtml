@@ -1,0 +1,139 @@
+﻿@{
+    Layout = null;
+
+}
+<<div id="tabs" class="wow bounceInUp" style="height:150px">
+    <img id="medicalTab" class="tabsIcons activeTab" src="~/images/Medical Info/medicalInfo.svg" />
+    <img id="contactsTab" class="tabsIcons unactiveTab" src="~/images/Medical Info/contacts.svg" />
+    <img id="chatTab" class="tabsIcons unactiveTab" src="~/images/Medical Info/chat.svg" />
+</div>
+<div id="divTabs" class="wow bounceInUp">
+    <div id="medicalInfo" style="width:100%" class="activeTabDiv tabDiv">
+        <div id="generalInfo" class="medicalInfoBox">
+            <img class="iconsMedicalInfo" src="~/images/Medical Info/GeneralInfoIcon.svg" />
+            <span class="titlesCaregiverEvent">General Information</span>
+            <p id="generalInfoText" class="textMedicalInfo"></p>
+        </div>
+        <div id="Allergies" class="medicalInfoBox">
+            <img class="iconsMedicalInfo" src="~/images/Medical Info/Allergies.svg" />
+            <span class="titlesCaregiverEvent">Allergies</span>
+            <p id="allergiesList" class="textMedicalInfo"></p>
+        </div>
+        <div id="Diseases" class="medicalInfoBox">
+            <img class="iconsMedicalInfo" src="~/images/Medical Info/Diseases.svg" />
+            <span class="titlesCaregiverEvent">Diseases</span>
+            <p id="diseasesList" class="textMedicalInfo" style="margin-top: 35px;"></p>
+        </div>
+        <div id="Medicines" class="medicalInfoBox">
+            <img class="iconsMedicalInfo" src="~/images/Medical Info/Medicines.svg" />
+            <span class="titlesCaregiverEvent">Medicines</span>
+            
+            <p id="medicinesList" class="textMedicalInfo" style="margin-top: 35px;"></p>
+        </div>
+    </div>
+    <div id="chat" style="width:100%" class="unactiveTabDiv tabDiv">
+        <div id="chat_area"/>
+		<div id="input_area">
+			<input id="txtMessage" type="text" placeholder="Type message..." />
+			<img id="arrowChat" alt="type" src="~/images/Medical Info/arrowChat.svg" />
+		</div>	
+    </div>
+    <div id="contacts" style="width:100%" class="unactiveTabDiv tabDiv">
+
+        <a href="tel:052666548" style="text-decoration:none;">
+            <div class="contactBar">
+                <img class="contactImg" src="images/contact-icon-1.svg" />
+                <span>[Daughter] Dana cohen</span>
+                <img class="phone" src="images/telephone-white-1-01.svg" />
+                <div class="clear"></div>
+            </div>
+        </a>
+        <a href="tel:0526267692" style="text-decoration:none;">
+            <div class="contactBar">
+                <img class="contactImg" src="images/contact-icon-1.svg" />
+                <span>[Doctor] Tania shtonkovliz</span>
+                <img class="phone" src="images/telephone-white-1-01.svg" />
+                <div class="clear"></div>
+            </div>
+            </a>
+</div>
+
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#medicalTab").click(function () {
+            switchTabs("medicalTab", "medicalInfo");
+        });
+        $("#chatTab").click(function () {
+            switchTabs("chatTab", "chat");
+        });
+        $("#contactsTab").click(function () {
+            switchTabs("contactsTab", "contacts");
+        });
+        function switchTabs(tabName, divName) {
+            $("#tabs img").each(function (index) {
+                if ($(this).attr('id') != tabName) {
+                    $(this).addClass("unactiveTab");
+                    $(this).removeClass("activeTab");
+                }
+                else {
+                    $(this).addClass("activeTab");
+                    $(this).removeClass("unactiveTab");
+                }
+            });
+
+            $(".tabDiv").each(function (index) {
+                if ($(this).attr('id') != divName) {
+                    $(this).addClass("unactiveTabDiv");
+                    $(this).removeClass("activeTabDiv");
+                }
+                else {
+                    $(this).addClass("activeTabDiv");
+                    $(this).removeClass("unactiveTabDiv");
+                }
+            });
+        }
+    });
+
+</script>
+<link href="~/css/chatCaregiver.css" rel="stylesheet" />
+<script>
+    var input = document.getElementById('txtMessage');
+    var chat_area = document.getElementById('chat_area');
+    var send = document.getElementById('arrowChat');
+
+    send.addEventListener('click', function () {
+        if (input.value.trim() == "") return;
+
+        var message_box = document.createElement('DIV');
+        message_box.setAttribute('class', 'message');
+        var content = document.createElement('SPAN');
+        var date = document.createElement('SPAN');
+        var clear_div = document.createElement('DIV');
+
+        var d = new Date();
+        content.style.float = 'left';
+        date.style.float = 'right';
+		date.style.fontSize = "36px";
+		date.style.paddingTop = "8px";		
+        clear_div.style.clear = 'both';
+        content.textContent = input.value.trim();
+        date.textContent = d.toTimeString().substr(0, 5);
+
+        message_box.appendChild(content);
+        message_box.appendChild(date);
+        message_box.appendChild(clear_div);
+        chat_area.appendChild(message_box);
+        input.value = "";
+
+    });
+    $("#txtMessage").keyup(function (event) {
+        if (event.keyCode == 13) {
+            $("#arrowChat").click();
+        }
+    });
+
+
+</script>
