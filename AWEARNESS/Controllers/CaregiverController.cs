@@ -1,4 +1,6 @@
 ﻿using AWEARNESS.Models.Repository;
+using AWEARNESS.Models.Utilities;
+using Logger;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,12 +22,17 @@ namespace AWEARNESS.Controllers
                 return HttpNotFound();
             }
 
-        
+         string ip =   NetworkUtilites.Instance.getUserIP(this);
+         LogManager.Instance.WriteInfo("Loggin , Caregiver\\Index, [IP] :" + ip);
             return View(user);
         }
 
         public ActionResult Login(string qrCodeId)
         {
+            
+         string ip =   NetworkUtilites.Instance.getUserIP(this);
+         LogManager.Instance.WriteInfo("Loggin , Caregiver\\Login, [IP] :" + ip);
+            
             return View();
         }
 

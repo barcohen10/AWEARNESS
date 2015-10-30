@@ -9,8 +9,7 @@ namespace AWEARNESS.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
-
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(AWEARNESS.Models.Repository.AwearnessDB context)

@@ -4,18 +4,11 @@
 body {
 	margin: 0;
 	background-color: #252932;
-	font-family: 'Open Sans';
 }
-p#logo {
+img#logo {
 	margin:0;
 	width:100%;
-	text-align:center;
-	background-color: #E2393E;
-	color:white;
-	font-size:60px;
-	padding-top:15px;
-	height:110px;
-	font-weight:400;
+	height:6.5%;
 }
 p#smiley_wrapper {
 	margin-top:10%;
@@ -31,11 +24,14 @@ h2 {
 	font-weight:400;
 	font-size:37px;
 	text-align:center;
+    font-family: 'Open Sans', sans-serif;
+
 }
 h2.bold {
 	font-weight:bold;
 }
 input#pinput {
+    font-family: 'Open Sans', sans-serif;
 	width:100%;
 	padding-left:35%;
 	background-color:#E2393E;

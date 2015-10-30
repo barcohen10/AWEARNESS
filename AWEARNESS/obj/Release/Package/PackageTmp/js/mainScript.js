@@ -78,27 +78,54 @@ function getAge(dateString) {
 
 function setOtherDetails(generalInfo, allergies, diseases, medicines)
 {
-    $('#generalInfoText').text(generalInfo);
-    allergiesArray = allergies.split("~!"); //backspace
-    diseasesArray = diseases.split("~!"); //backspace
-    medicinesArray = medicines.split("~!"); //backspace
-    var allergiesHtml = '';
-    var diseasesHtml = '';
-    var medicinesHtml = '';
-    $.each(allergiesArray, function (index, value) {
-        allergiesHtml += value + "</br>";
-    });
-    $.each(diseasesArray, function (index, value) {
-        diseasesHtml += value + "</br>";
-    });
-    $.each(medicinesArray, function (index, value) {
-        medicinesHtml += value + "</br>";
-    });
-    $('#allergiesList').html(allergiesHtml);
-    $('#diseasesList').html(diseasesHtml);
-    $('#medicinesList').html(medicinesHtml);
+    if (generalInfo == '')
+    {
+        $('#generalInfo').css("display", "none");
+    }
+    else
+    {
+        $('#generalInfoText').text(generalInfo);
+    }
 
+    if (allergies != '')
+    {
+        allergiesArray = allergies.split("~!"); //backspace
+        var allergiesHtml = '';
+        $.each(allergiesArray, function (index, value) {
+            allergiesHtml += value + "</br>";
+        });
+        $('#allergiesList').html(allergiesHtml);
+    }
+    else
+    {
+        $('#Allergies').css("display", "none");
+    }
 
+    if (diseases != '')
+    {
+        diseasesArray = diseases.split("~!"); //backspace
+        var diseasesHtml = '';
+        $.each(diseasesArray, function (index, value) {
+            diseasesHtml += value + "</br>";
+        });
+        $('#diseasesList').html(diseasesHtml);
+    }
+    else
+    {
+        $('#Diseases').css("display", "none");
+    }
 
-
+    if (medicines != '')
+    {
+        medicinesArray = medicines.split("~!"); //backspace
+        var medicinesHtml = '';
+        $.each(medicinesArray, function (index, value) {
+            medicinesHtml += value + "</br>";
+        });
+        $('#medicinesList').html(medicinesHtml);
+    }
+    else
+    {
+        $('#Medicines').css("display", "none");
+    }
 }

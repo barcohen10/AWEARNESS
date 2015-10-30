@@ -23,7 +23,7 @@ namespace AWEARNESS.Controllers
       public  AwearnessDB m_AwearnessDB = new AwearnessDB();
         public ActionResult GetImage(string userid)
         {
-            var dir = Server.MapPath("/Images/Users");
+            var dir = Server.MapPath("/Images/UsersProfiles");
             var path = Path.Combine(dir, userid + ".jpg");
             return base.File(path, "image/jpeg");
         }

@@ -50,7 +50,23 @@
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Logger, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Logger.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MySql.Data.Entity.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -73,10 +89,6 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
@@ -126,9 +138,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201510190155365_subscriber addon.cs" />
-    <Compile Include="Migrations\201510190155365_subscriber addon.Designer.cs">
-      <DependentUpon>201510190155365_subscriber addon.cs</DependentUpon>
+    <Compile Include="Migrations\201510211913044_Initial.cs" />
+    <Compile Include="Migrations\201510211913044_Initial.Designer.cs">
+      <DependentUpon>201510211913044_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Repository\AwearnessDB.cs" />
@@ -171,19 +183,11 @@
     <Content Include="images\ComingSoon\txt-launch-day-hat.png" />
     <Content Include="images\ComingSoon\txt-launch-day.png" />
     <Content Include="images\contact-icon-1.svg" />
-    <Content Include="images\users\0503546454.jpg" />
-    <Content Include="images\users\0509165824.jpg" />
-    <Content Include="images\users\0523891844.jpg" />
-    <Content Include="images\users\0526148762.jpg" />
-    <Content Include="images\users\0526267694.jpg" />
-    <Content Include="images\users\0526353547.jpg" />
-    <Content Include="images\users\0526881855.jpg" />
-    <Content Include="images\users\0543377272.jpg" />
+    <Content Include="images\icon.png" />
     <Content Include="images\Medical Info\arrowChat.svg" />
     <Content Include="images\bar-1.svg" />
     <Content Include="images\contant-hole-1.svg" />
     <Content Include="images\contect-hole-big-1.svg" />
-    <Content Include="images\icon.png" />
     <Content Include="images\Medical Info\Allergies.svg" />
     <Content Include="images\Medical Info\Diseases.svg" />
     <Content Include="images\Medical Info\GeneralInfoIcon.svg" />
@@ -196,6 +200,14 @@
     <Content Include="images\smily-icon-01.svg" />
     <Content Include="images\sumbit-icon.svg" />
     <Content Include="images\telephone-white-1-01.svg" />
+    <Content Include="images\usersProfiles\0503546454.jpg" />
+    <Content Include="images\usersProfiles\0509165824.jpg" />
+    <Content Include="images\usersProfiles\0523891844.jpg" />
+    <Content Include="images\usersProfiles\0526148762.jpg" />
+    <Content Include="images\usersProfiles\0526267694.jpg" />
+    <Content Include="images\usersProfiles\0526353547.jpg" />
+    <Content Include="images\usersProfiles\0526881855.jpg" />
+    <Content Include="images\usersProfiles\0543377272.jpg" />
     <Content Include="js\chat.js" />
     <Content Include="js\jquery.tipsy.js" />
     <Content Include="js\mainScript.js" />
@@ -248,8 +260,8 @@
     <None Include="Properties\PublishProfiles\awearness.pubxml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201510190155365_subscriber addon.resx">
-      <DependentUpon>201510190155365_subscriber addon.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201510211913044_Initial.resx">
+      <DependentUpon>201510211913044_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

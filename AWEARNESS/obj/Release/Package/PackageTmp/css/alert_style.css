@@ -39,7 +39,7 @@ p#name {
     margin:0;
 }
 
-p#age {
+p#age{ 
     position: absolute;
     color: white;
     font-size: 40px;
@@ -120,23 +120,27 @@ p.repeat {
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: white;
     font-family: 'Open Sans', sans-serif;
+    padding-bottom:10px;
 }
 
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color: white;
     opacity: 1;
     font-family: 'Open Sans', sans-serif;
+    padding-bottom:10px;
 }
 
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
     color: white;
     opacity: 1;
     font-family: 'Open Sans', sans-serif;
+        padding-bottom:10px;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: white;
     font-family: 'Open Sans', sans-serif;
+        padding-bottom:10px;
 }
 
 
@@ -151,7 +155,7 @@ p.repeat {
 
 #personal {
     /*background-image: url('../imgaes/users/0543377272.jpg');*/
-    height: 34vh;
+    height: 41vh;
     width: 100%;
     position: relative;
     background-size: 100% 100%;
@@ -180,13 +184,13 @@ p.repeat {
 
 @media screen and (orientation: portrait) {
     #icon {
-        max-width: 90%;
+        max-width: 60%;
     }
 }
 
 @media screen and (orientation: landscape) {
     #icon {
-        max-height: 90%;
+        max-height: 60%;
     }
 }
 /*///////////////////////////////////////////////////////////////////*/
@@ -202,19 +206,18 @@ p.repeat {
 
 .iconsMedicalInfo
 {
-    width: 3%;
-    margin-left: 12%;
-    margin-top: 5%;
-    margin-right: 5%;
+	height:70px;
+	width:70px;
+	position:relative;
+	top:23px;
 }
 
 .titlesCaregiverEvent
 {
-    color: white;
-    font-weight: bold;
-    font-size: 39px;
-    position: absolute;
-    margin-top: 60px;
+	font-size: 41px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color:white;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -228,41 +231,22 @@ p.repeat {
     opacity:0.6;
 }
 
-#generalInfo, #Diseases
-{
-    border-top: none;
-    border-bottom: 2px solid white;
-    border-left: none;
-    border-right: 2px solid white;
-}
 
 .medicalInfoBox
 
 {
-     width:99%;
-     position:relative;
-     min-height: 180px;
+	color:white;
+	border-bottom:1px solid white;
+	padding:35px;
+
 }
 
-#Allergies {
-    border-top: none;
-    border-bottom: 2px solid white;
-    border-left: 2px solid white;
-    border-right: none;
-}
-#Medicines {
-    border-top: none;
-    border-bottom: none;
-    border-left: 2px solid white;
-    border-right: none;
-}
 .textMedicalInfo
 {
-    color: white;
-    font-size: 15px;
-    margin-left: 20%;
-    max-width: 70%;
-    margin-top:10px;
+    color:white;
+	padding-left:90px;
+	font-size:36px;
+	font-weight:400;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -276,34 +260,35 @@ p.repeat {
 }
 div.contactBar {
 	width:100%;
+	height:130px;
 	box-sizing:border-box;
 	background-color:#252932;
-	padding:22px;
+	padding:26px;
 	border:none;
 	border-top:1px solid white;
 	border-bottom:1px solid white;
-	display:table;
+	margin:0;
+	position:relative;
 }
 div.contactBar span {
 	color:white;
-	font-size:36px;
-	padding-left:1%;
-	text-align:left;
-	display:table-cell;
-	vertical-align:middle;
+	font-size:37px;
+	position:absolute;
+	left:20%;
+	top:43px;
+    font-family:'Open Sans', sans-serif;
 }
 div.contactBar img.contactImg {
 	width:50px;
 	height:55px;
-	padding-left:22%;
-	display:table-cell;
-	vertical-align:middle;
+	position:absolute;
+	left:10%;
+	top:35px;
 }
 div.contactBar img.phone {
-	width:55px;
-	height:60px;
-	float:right;
-	display:table-cell;
-	vertical-align:middle;
-	padding-right:20%;
+	width:70px;
+	height:80px;
+	position:absolute;
+	top:20px;
+	right:10%;
 }

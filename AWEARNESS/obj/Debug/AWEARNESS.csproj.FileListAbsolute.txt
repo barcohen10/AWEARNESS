@@ -1,52 +1,57 @@
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\AWEARNESS.dll.config
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\AWEARNESS.dll
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\AWEARNESS.pdb
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\EntityFramework.dll
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\Microsoft.Web.Infrastructure.dll
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\Newtonsoft.Json.dll
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.Helpers.dll
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.Mvc.dll
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.Razor.dll
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.Deployment.dll
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.dll
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.Razor.dll
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\EntityFramework.xml
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\Newtonsoft.Json.xml
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.Helpers.xml
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.Mvc.xml
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.Razor.xml
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.xml
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.Deployment.xml
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.Razor.xml
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.csprojResolveAssemblyReference.cache
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.Migrations.subscriberaddon.resources
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.csproj.GenerateResource.Cache
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.dll
-C:\XNA\AWEARNESS\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.pdb
-C:\XNA\AWEARNESS\AWEARNESS\bin\AWEARNESS.dll.config
-C:\XNA\AWEARNESS\AWEARNESS\bin\AWEARNESS.dll
-C:\XNA\AWEARNESS\AWEARNESS\bin\AWEARNESS.pdb
-C:\XNA\AWEARNESS\AWEARNESS\bin\EntityFramework.dll
-C:\XNA\AWEARNESS\AWEARNESS\bin\Microsoft.Web.Infrastructure.dll
-C:\XNA\AWEARNESS\AWEARNESS\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
-C:\XNA\AWEARNESS\AWEARNESS\bin\Newtonsoft.Json.dll
-C:\XNA\AWEARNESS\AWEARNESS\bin\System.Web.Helpers.dll
-C:\XNA\AWEARNESS\AWEARNESS\bin\System.Web.Mvc.dll
-C:\XNA\AWEARNESS\AWEARNESS\bin\System.Web.Razor.dll
-C:\XNA\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.Deployment.dll
-C:\XNA\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.dll
-C:\XNA\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.Razor.dll
-C:\XNA\AWEARNESS\AWEARNESS\bin\EntityFramework.xml
-C:\XNA\AWEARNESS\AWEARNESS\bin\Newtonsoft.Json.xml
-C:\XNA\AWEARNESS\AWEARNESS\bin\System.Web.Helpers.xml
-C:\XNA\AWEARNESS\AWEARNESS\bin\System.Web.Mvc.xml
-C:\XNA\AWEARNESS\AWEARNESS\bin\System.Web.Razor.xml
-C:\XNA\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.xml
-C:\XNA\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.Deployment.xml
-C:\XNA\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.Razor.xml
-C:\XNA\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.csprojResolveAssemblyReference.cache
-C:\XNA\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.Migrations.subscriberaddon.resources
-C:\XNA\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.csproj.GenerateResource.Cache
-C:\XNA\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.dll
-C:\XNA\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.pdb
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\AWEARNESS.dll.config
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\AWEARNESS.dll
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\AWEARNESS.pdb
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\EntityFramework.dll
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\Newtonsoft.Json.dll
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Net.Http.Formatting.dll
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.Helpers.dll
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.Http.dll
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.Http.WebHost.dll
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.Mvc.dll
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.Razor.dll
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.dll
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.Razor.dll
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\EntityFramework.xml
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\Microsoft.Web.Infrastructure.xml
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Net.Http.Formatting.xml
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.Helpers.xml
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.Http.xml
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.Http.WebHost.xml
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.Mvc.xml
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.Razor.xml
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.xml
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.Razor.xml
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.dll
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.pdb
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.csprojResolveAssemblyReference.cache
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\bin\MySql.Data.xml
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.Migrations.Initial.resources
+C:\Projects\Com Unity\AWEARNESS\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.csproj.GenerateResource.Cache
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\AWEARNESS.dll.config
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\AWEARNESS.dll
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\AWEARNESS.pdb
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\EntityFramework.dll
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\Newtonsoft.Json.dll
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\System.Web.Helpers.dll
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\System.Web.Mvc.dll
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\System.Web.Razor.dll
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.dll
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\EntityFramework.xml
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\Newtonsoft.Json.xml
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\System.Web.Helpers.xml
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\System.Web.Mvc.xml
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\System.Web.Razor.xml
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.xml
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.csprojResolveAssemblyReference.cache
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.Migrations.Initial.resources
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.csproj.GenerateResource.Cache
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.dll
+C:\Users\Dotan\Desktop\AWEARNESS\AWEARNESS\obj\Debug\AWEARNESS.pdb
