@@ -9,36 +9,7 @@
     <title>AWEARNESS</title>
     <link href="~/css/comingsoon.css" rel="stylesheet" />
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'></script>
-    <script src="~/js/jquery.tipsy.js"></script>
-    <script type='text/javascript'>
-        $(function() {
-            $('#tipsy').tipsy({fade: true, gravity: 's'});
-        });
-        $(document).ready(
-            function () {
-
-                $('#subscribebtn').click(function () {
-                    var url = "/Home/Subscribe";
-                    var inputEmail = $("#emailtxt").val();
-                    $.post(url, { email: inputEmail }, function (data)
-                    {
-                        if (data == 'false') {
-
-                            $('#errorMessage').css("visibility", "visible");
-                        }
-                        else {
-                            var mainWrapper = $('#mainWrapper"');
-                            mainWrapper.empty();
-                            mainWrapper.html('<img src="images/ComingSoon/AWEARNESS.png" alt="AWEARNESS" title="AWEARNESS" style="width:55%" /><div class="hr"></div><h1 style="color:white">See you soon !</h1><p>U</strong></p>')
-                        };
-
-                    });
-
-
-                });
-            });
-     
-    </script>
+    @*<script src="~/js/jquery.tipsy.js"></script>*@
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -50,7 +21,8 @@
         <div class="hr"></div>
         <h1 style="color:white">Coming Soon! Be Aware</h1>
         <p>Unfortunately, we’re not quite ready yet. <strong> But, you can see our progress below:</strong></p>
-
+        <br />
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/sdeWvlTOXL0" frameborder="0" allowfullscreen></iframe>
         <section class="progress">
             <div class="progress-bar-container" id="tipsy" title="87% Complete">
                 <!-- Edit this title for the tooltip pop up -->
@@ -63,7 +35,7 @@
         <section class="mailing-list">
             <h2 style="color:white">Want to be the first to know when we're ready?</h2>
             <form>
-                <input type="text" id="emailtxt" value="your@email.com" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
+                <input type="text" id="emailtxt" placeholder="your@email.com" />
                 <input type="submit" id="subscribebtn" value="Subscribe">
                 <p id="errorMessage" style="color:red; visibility:hidden;">Please type in your email</p>
 
@@ -72,4 +44,35 @@
         <div class="hr"></div>
     </div>
 </body>
+<script type='text/javascript'>
+    $(function () {
+        //$('#tipsy').tipsy({ fade: true, gravity: 's' });
+    });
+    $(document).ready(
+        function () {
+
+            $('#subscribebtn').click(function () {
+                var url = "/Home/Subscribe";
+                var inputEmail = $("#emailtxt").val();
+                $.post(url, { email: inputEmail }, function (data) {
+                    console.log("Data is : " + data);
+                    if (data == 'false') {
+
+                        $('#errorMessage').css("visibility", "visible");
+                    }
+                    else {
+                        alert("ajax success");
+                        var mainWrapper = $('#mainWrapper"');
+                        mainWrapper.empty();
+                        mainWrapper.html('<img src="images/ComingSoon/AWEARNESS.png" alt="AWEARNESS" title="AWEARNESS" style="width:55%" /><div class="hr"></div><h1 style="color:white">See you soon !</h1>')
+                    }
+
+                });
+
+
+            });
+        });
+
+</script>
+
 </html>
